@@ -125,7 +125,7 @@ export default function DriverDashboardPage() {
     setToast({ msg, type, show: true });
     clearTimeout(toastTimer.current);
     toastTimer.current = setTimeout(
-      () => setToast((t) => ({ ...t, show: false })),
+      () => setToast((t: typeof toast) => ({ ...t, show: false })),
       2800
     );
   }, []);
@@ -368,7 +368,7 @@ export default function DriverDashboardPage() {
           {logs.length === 0 ? (
             <div style={styles.emptyLog}>📋 Updates will appear here once you start</div>
           ) : (
-            logs.map((item) => (
+            logs.map((item: LogItem) => (
               <div key={item.id} style={styles.logItem}>
                 <div style={{ ...styles.logDot, background: item.type === 'ok' ? '#3EC97C' : item.type === 'warn' ? '#F5A623' : '#E05252' }} />
                 <div>
