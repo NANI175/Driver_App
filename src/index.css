@@ -1,0 +1,29 @@
+:root {
+  --primary: #2F3E66;
+  --accent: #4A90D9;
+  --success: #4CAF82;
+  --gold: #F5A623;
+  --green: #3EC97C;
+  --red: #E05252;
+  --bg: #F0F4FF;
+  --white: #fff;
+  --border: #d8e0f0;
+  --ink: #1a2540;
+  --muted: #7a8aaa;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
