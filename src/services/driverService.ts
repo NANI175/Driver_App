@@ -91,9 +91,10 @@ export async function pushGpsUpdate(
   busId: string,
   lat: number,
   lng: number,
-  speed: number, // Speed ignored in bus update to satisfy strict rules
+  _speed: number, // Marked as unused for Netlify deployment (Strict Rule Compliance)
   status: 'Active' | 'Idle' | 'Delayed' | 'Offline'
 ): Promise<void> {
+  void _speed; // Explicitly mark as intentionally unused
   if (!busId) throw new Error('Missing bus ID');
   await updateDoc(doc(db, 'buses', busId), {
     lastLocation: { lat, lng },
